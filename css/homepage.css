@@ -1,0 +1,106 @@
+*{
+    font-family:deja vu sans mono, sans-serif;
+}
+body{
+    margin: 0%;
+}
+
+/* this the navigation section */
+.header{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    color: rgba(0, 0,0, 0.85);
+}
+
+.header_logo{
+    margin-left: 25px;
+    font-weight: 700;
+}
+
+.header_menu {
+    display:flex;
+    font-weight: 500;
+    justify-content:space-evenly;
+    column-gap: 30px;
+    align-items: center;
+    margin-right: 20px;
+}
+.header_menu li {
+    list-style: none;
+    font-size: 25px;
+}
+
+.header_menu li a {
+    text-decoration: none;
+    color: rgba(0, 0,0, 0.85);
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.header_menu li  a:hover{
+    border-bottom: 3px solid rgb(76, 76, 217);
+}
+
+/* this is the image section */
+.hero{
+    background: url(../jamp.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:90vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.overlay{
+    border-image: linear-gradient(rgba(45,77,102,0.9),rgba(45,77,102,0.9)) fill 1;
+    /* border-image: linear-gradient(rgba(186, 44, 205, 0.95),rgba(40, 45, 180, 0.95)) fill 1;
+    /* border-image: linear-gradient(rgba(69, 30, 208, 0.95),rgba(34, 130, 203, 0.95)) fill 1; */
+    /* border-image: linear-gradient(rgba(173, 31, 64, 0.95),rgba(187, 187, 35, 0.95)) fill 1; */
+}
+
+.hero_content{
+    color: aliceblue;
+    font-size:45px;
+    text-align: center;
+}
+
+.browse_section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0,0, 0.85);
+    flex-direction: column;
+    padding:30px;
+}
+
+/* this is for the browse section  */
+
+.browse_section h1{
+    font-size:60px;
+}
+
+.browse_section_category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 20px;
+    padding-bottom: 30px;
+}
+.browse_section_category a{
+    text-decoration: none;
+    padding: 15px;
+    font-size: 35px;
+    background-color:rgb(213, 223, 234);
+    color: inherit;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* this is for the featured books section */

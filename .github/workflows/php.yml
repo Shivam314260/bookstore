@@ -1,0 +1,26 @@
+name: PHP CI
+
+on:
+  workflow_dispatch:   # allows manual execution
+  push:                # runs when you push to repo
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+
+      - name: Install Composer dependencies
+        run: composer install --ignore-platform-reqs
+
+      - name: Run basic PHP syntax check
+        run: |
+          find . -name "*.php" -print0 | xargs -0 -n1 php -l
